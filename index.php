@@ -244,6 +244,21 @@ foreach ($creations as $creation) {
 		<footer>
 			<a href="https://gitlab.com/se7h/thomasblanschong.fr">Code source</a>
 		</footer>
+<?php
+if ( isset($_GET['sent']) ) {
+?>
+		<div id="mbox">
+			<form method="get" action="">
+				<p>
+					Votre courriel à bien été envoyé.<br />
+					Vous aurrez une réponse d'ici les prochaines 72h.
+				</p>
+				<input type="submit" value="Valider" />
+			</div>
+		</div>
+<?php
+}
+?>
 		<script src="js/default.js"></script>
 	</body>
 </html>

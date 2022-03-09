@@ -649,7 +649,8 @@ main section {
 }
 
 #contact input,
-#contact textarea {
+#contact textarea,
+#mbox form input {
 	padding: 2px 6px;
 	width: 100%;
 	color: #fff;
@@ -710,6 +711,20 @@ main section {
 	background-color: var(--main-color1);
 }
 
+#mbox form input[type="submit"] {
+	margin-top: 20px;
+	color: var(--main-color2);
+	border-color: var(--main-color1);
+	background-color: var(--main-color1);
+	cursor: pointer;
+}
+
+#mbox form input[type="submit"]:hover,
+#mbox form input[type="submit"]:focus {
+	color: var(--main-color1);
+	background-color: var(--main-color2);
+}
+
 #contact .description {
 	font-size: 18px;
 }
@@ -723,6 +738,27 @@ footer {
 	text-align: left;
 	z-index: 10;
 	touch-action: none;
+}
+
+#mbox {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: #000c;
+	z-index: 100;
+}
+
+#mbox form {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 15px;
+	font-size: 22px;
 }
 
 @media screen and (max-width: 1800px) {
