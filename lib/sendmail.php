@@ -19,7 +19,7 @@ else {
 	{
 		$out = 'errnom=1';
 	}
-	else if (strlen($_POST['nom']) < 3 || strlen($_POST['nom']) > 50)
+	else if (strlen($_POST['nom']) < 3 || strlen($_POST['nom']) > 100)
 	{
 		$out = 'errnom=2';
 	}
@@ -55,7 +55,7 @@ else {
 		$out .= 'errobjet=1';
 	}
 
-	if (strlen($_POST['message']) < 20 || strlen($_POST['message']) > 1000)
+	if (strlen($_POST['message']) < 20 || strlen($_POST['message']) > 5000)
 	{
 		if (!empty($out))
 			$out .= '&';

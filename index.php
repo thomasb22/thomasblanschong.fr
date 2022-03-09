@@ -245,13 +245,41 @@ foreach ($creations as $creation) {
 			<a href="https://gitlab.com/se7h/thomasblanschong.fr">Code source</a>
 		</footer>
 <?php
-if ( isset($_GET['sent']) ) {
+if ( isset($_GET['sent']) || isset($_GET['errnom']) || isset($_GET['erremail']) || isset($_GET['errsite']) || isset($_GET['errobjet']) ||
+	isset($_GET['errmess']) || isset($_GET['errcaptcha']) || isset($_GET['errsend']) ) {
+	$message = '';
+
+	if ( isset($_GET['sent']) )
+		$message = "Votre courriel à bien été envoyé.<br />
+					Vous aurrez une réponse d'ici les prochaines 72h.";
+	else {
+		if ( isset($_GET['errnom']) && $_GET['errnom'] == 1 )
+			$message .= "> Vous avez oublié d'entrer votre nom<br />";
+		if ( isset($_GET['errnom']) && $_GET['errnom'] == 2 )
+			$message .= "> Votre nom doit être composé de 3 à 100 caractères<br />";
+		if ( isset($_GET['erremail']) && $_GET['erremail'] == 1 )
+			$message .= "> Vous avez oublié d'entrer votre courriel<br />";
+		if ( isset($_GET['erremail']) && $_GET['erremail'] == 2 )
+			$message .= "> Votre courriel est incorrecte<br />";
+		if ( isset($_GET['errsite']) && $_GET['errsite'] == 1 )
+			$message .= "> L'adresse de votre site web est incorrecte<br />";
+		if ( isset($_GET['errobjet']) && $_GET['errobjet'] == 1 )
+			$message .= "> L'objet doit être composé de 3 à 100 caractères<br />";
+		if ( isset($_GET['errmess']) && $_GET['errmess'] == 1 )
+			$message .= "> Le message doit être composé de 20 à 5000 caractères<br />";
+		if ( isset($_GET['errcaptcha']) && $_GET['errcaptcha'] == 1 )
+			$message .= "> Vous n'avez pas entré la bonne réponse à la question de sécurité<br />";
+		if ( isset($_GET['errsend']) && $_GET['errsend'] == 1 )
+			$message .= "> Il y a eu une erreur lors de l'envoi de votre courriel. Veuillez réessayer ultérieurement.
+					</p>
+					<p>
+						".$_SESSION['erreurMail'];
+	}
 ?>
 		<div id="mbox">
 			<form method="get" action="">
 				<p>
-					Votre courriel à bien été envoyé.<br />
-					Vous aurrez une réponse d'ici les prochaines 72h.
+					<?php echo $message; ?>
 				</p>
 				<input type="submit" value="Valider" />
 			</div>
