@@ -119,14 +119,14 @@ foreach ($creations as $creation) {
 ?>
 					<li id="<?php echo $creation['id']; ?>">
 						<picture>
-							<source srcset="img/creations/<?php echo $creation['shortname']; ?>-500w.jpg 500w, img/creations/<?php echo $creation['shortname']; ?>-1920w.jpg 1150w" />
-							<img src="img/creations/<?php echo $creation['shortname']; ?>-50w.jpg" alt="Capture d'écran du site <?php echo $creation['name']; ?>" loading="lazy" />
+							<source srcset="img/creations/<?php echo $creation['shortname']; ?>-500w.webp 500w, img/creations/<?php echo $creation['shortname']; ?>-1920w.webp 1150w" />
+							<img src="img/creations/<?php echo $creation['shortname']; ?>-50w.webp" alt="Capture d'écran du site <?php echo $creation['name']; ?>" loading="lazy" />
 						</picture>
 <?php
 	if ($creation['mobile']) {
 ?>
-						<img id="smartphone" src="img/smartphone.png" alt="Smartphone" loading="lazy" />
-						<img id="mobile" src="img/creations/<?php echo $creation['shortname']; ?>-mobile.jpg" alt="Capture d'écran version mobile du site <?php echo $creation['name']; ?>" loading="lazy" />
+						<img id="smartphone" src="img/smartphone.webp" alt="Smartphone" loading="lazy" />
+						<img id="mobile" src="img/creations/<?php echo $creation['shortname']; ?>-mobile.webp" alt="Capture d'écran version mobile du site <?php echo $creation['name']; ?>" loading="lazy" />
 <?php
 	}
 ?>
