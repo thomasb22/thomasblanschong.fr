@@ -926,9 +926,19 @@ footer {
 		display: none;
 	}
 
-	#smartphone,
-	#mobile {
-		display: none;
+	#creations #smartphone,
+	#creations #mobile {
+		top: 22%;
+		bottom: unset;
+		left: unset;
+		right: 6px;
+		height: 17%;
+		transform: translateX( 0px );
+	}
+
+	#creations #mobile {
+		height: 16%;
+		transform: translate(-5%, 2%);
 	}
 
 	#a-propos div {
