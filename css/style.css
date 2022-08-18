@@ -224,6 +224,8 @@ header img {
 }
 
 main {
+	display: flex;
+	flex-wrap: wrap;
 	height: 100%;
 	color: var(--main-color2);
 	scroll-snap-type: y mandatory;
