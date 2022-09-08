@@ -19,8 +19,38 @@ var observer = new IntersectionObserver(function(entries, observer) {
 		});
 
 		if (activated.intersectionRatio > 0) {
+			var cursorpos = 0;
+
 			if (activated.target.getAttribute('id') != 'presentation')
 				activated.target.classList.add('animed');
+
+			if (activated.target.getAttribute('id') == 'presentation') {
+				document.querySelector('#cursor').style.bottom = '-20px';
+			}
+
+			if (activated.target.getAttribute('id') == 'services') {
+				cursorpos = document.querySelector('#menu ul li:nth-child(1)').offsetWidth / 2 + 50;
+				document.querySelector('#cursor').style.bottom = '0';
+				document.querySelector('#cursor').style.left = cursorpos + 'px';
+			}
+
+			if (activated.target.getAttribute('id') == 'creations') {
+				cursorpos = document.querySelector('#menu ul li:nth-child(1)').offsetWidth + document.querySelector('#menu ul li:nth-child(2)').offsetWidth / 2 + 100;
+				document.querySelector('#cursor').style.bottom = '0';
+				document.querySelector('#cursor').style.left = cursorpos + 'px';
+			}
+
+			if (activated.target.getAttribute('id') == 'a-propos') {
+				cursorpos = document.querySelector('#menu ul li:nth-child(1)').offsetWidth + document.querySelector('#menu ul li:nth-child(2)').offsetWidth + document.querySelector('#menu ul li:nth-child(3)').offsetWidth / 2 + 150;
+				document.querySelector('#cursor').style.bottom = '0';
+				document.querySelector('#cursor').style.left = cursorpos + 'px';
+			}
+
+			if (activated.target.getAttribute('id') == 'contact') {
+				cursorpos = document.querySelector('#menu ul li:nth-child(1)').offsetWidth + document.querySelector('#menu ul li:nth-child(2)').offsetWidth + document.querySelector('#menu ul li:nth-child(3)').offsetWidth + document.querySelector('#menu ul li:nth-child(4)').offsetWidth / 2 + 200;
+				document.querySelector('#cursor').style.bottom = '0';
+				document.querySelector('#cursor').style.left = cursorpos + 'px';
+			}
 		}
 	}, {
 		root: scrollContainer,

@@ -40,6 +40,7 @@ require('config.php');
 						<a href="#contact">Contact</a>
 					</li>
 				</ul>
+				<div id="cursor"></div>
 			</nav>
 			<a id="nav-mobile" href="#menu">
 				<i class="fas fa-bars"></i>
@@ -241,9 +242,6 @@ foreach ($creations as $creation) {
 				</div>
 			</section>
 		</main>
-		<footer>
-			<a href="https://gitlab.com/se7h/thomasblanschong.fr">Code source</a>
-		</footer>
 <?php
 if ( isset($_GET['sent']) || isset($_GET['errnom']) || isset($_GET['erremail']) || isset($_GET['errsite']) || isset($_GET['errobjet']) ||
 	isset($_GET['errmess']) || isset($_GET['errcaptcha']) || isset($_GET['errsend']) ) {
