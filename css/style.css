@@ -237,6 +237,7 @@ main section {
 	position: relative;
 	padding: 95px 400px 0;
 	height: calc(100% - 95px);
+	width: 100%;
 	scroll-snap-align: end;
 	overflow: hidden;
 }
