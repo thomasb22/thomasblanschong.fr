@@ -737,17 +737,6 @@ main section {
 	font-size: 18px;
 }
 
-footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	margin-left: 400px;
-	line-height: 42px;
-	text-align: left;
-	z-index: 10;
-	touch-action: none;
-}
-
 #mbox {
 	position: absolute;
 	left: 0;
@@ -786,10 +775,6 @@ footer {
 
 	#creations aside {
 		padding-right: 200px;
-	}
-
-	footer {
-		margin-left: 200px;
 	}
 }
 
@@ -965,9 +950,5 @@ footer {
 
 	#contact textarea {
 		height: 85px;
-	}
-
-	footer {
-		margin-left: 10px;
 	}
 }
