@@ -216,12 +216,12 @@ foreach ($creations as $creation) {
 					<form method="post" action="lib/sendmail.php">
 						<div>
 							<div class="inputblock">
-								<input type="text" name="nom" id="nom" minlength="3" maxlength="100" placeholder="Nom*" value="" required />
+								<input type="text" name="nom" id="nom" minlength="3" maxlength="100" placeholder="Nom*" value="<?php echo $_SESSION['formNom'] ?>" required />
 								<div class="error">
 									3 caractères minimum
 								</div>
 							</div><div class="inputblock">
-								<input type="email" name="email" id="email" maxlength="255" placeholder="Courriel*" value="" required />
+								<input type="email" name="email" id="email" maxlength="255" placeholder="Courriel*" value="<?php echo $_SESSION['formEmail'] ?>" required />
 								<div class="error">
 									Adresse courriel incorrecte
 								</div>
@@ -232,19 +232,19 @@ foreach ($creations as $creation) {
 						</div>
 						<div>
 							<div class="inputblock">
-								<input type="text" name="objet" id="objet" minlength="3" maxlength="100" placeholder="Objet*" value="" required />
+								<input type="text" name="objet" id="objet" minlength="3" maxlength="100" placeholder="Objet*" value="<?php echo $_SESSION['formObjet'] ?>" required />
 								<div class="error">
 									3 caractères minimum
 								</div>
 							</div><div class="inputblock">
-								<input type="url" name="site" id="site" maxlength="255" placeholder="Site web" value="" />
+								<input type="url" name="site" id="site" maxlength="255" placeholder="Site web" value="<?php echo $_SESSION['formSite'] ?>" />
 								<div class="error">
 									L'adresse web doit débuter par http:// ou https://
 								</div>
 							</div>
 						</div>
 						<div>
-							<textarea name="message" id="message" minlength="20" maxlength="5000" placeholder="Message* (20 caractères minimum)" required></textarea>
+							<textarea name="message" id="message" minlength="20" maxlength="5000" placeholder="Message* (20 caractères minimum)" required><?php echo $_SESSION['formMess'] ?></textarea>
 							<div class="error">
 								20 caractères minimum
 							</div>
