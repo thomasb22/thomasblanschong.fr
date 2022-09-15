@@ -215,22 +215,47 @@ foreach ($creations as $creation) {
 					</p>
 					<form method="post" action="lib/sendmail.php">
 						<div>
-							<input type="text" name="nom" id="nom" minlength="3" maxlength="100" placeholder="Nom*" value="" required /><input type="email" name="email" id="email" maxlength="255" placeholder="Courriel*" value="" required />
+							<div class="inputblock">
+								<input type="text" name="nom" id="nom" minlength="3" maxlength="100" placeholder="Nom*" value="" required />
+								<div class="error">
+									3 caractères minimum
+								</div>
+							</div><div class="inputblock">
+								<input type="email" name="email" id="email" maxlength="255" placeholder="Courriel*" value="" required />
+								<div class="error">
+									Adresse courriel incorrecte
+								</div>
+							</div>
 							<div class="description">
 								<input type="checkbox" name="copie" id="copie" /> <label for="copie">Envoyer une copie à votre adresse courriel</label>
 							</div>
 						</div>
 						<div>
-							<input type="text" name="objet" id="objet" minlength="3" maxlength="100" placeholder="Objet*" value="" required /><input type="url" name="site" id="site" maxlength="255" placeholder="Site web" value="" />
+							<div class="inputblock">
+								<input type="text" name="objet" id="objet" minlength="3" maxlength="100" placeholder="Objet*" value="" required />
+								<div class="error">
+									3 caractères minimum
+								</div>
+							</div><div class="inputblock">
+								<input type="url" name="site" id="site" maxlength="255" placeholder="Site web" value="" />
+								<div class="error">
+									L'adresse web doit débuter par http:// ou https://
+								</div>
+							</div>
 						</div>
 						<div>
 							<textarea name="message" id="message" minlength="20" maxlength="5000" placeholder="Message* (20 caractères minimum)" required></textarea>
+							<div class="error">
+								20 caractères minimum
+							</div>
 							<div class="description">
 								<span id="counter">5000</span> <span id="countermessage">caractères restants</span>
 							</div>
 						</div>
 						<div>
-							<input type="number" name="captcha" id="captcha" min="0" max="99" placeholder="Combien font <?php echo $_SESSION['captcha'][0]; ?> + <?php echo $_SESSION['captcha'][1]; ?> ?*" required />
+							<input type="number" name="captcha" id="captcha" min="0" max="99" placeholder="Combien font <?php echo $_SESSION['captcha'][0]; ?> + <?php echo $_SESSION['captcha'][1]; ?> ?*" required /><div class="error">
+								Nombre uniquement
+							</div>
 						</div>
 						<div class="description">
 							* Obligatoire

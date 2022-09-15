@@ -685,11 +685,65 @@ main section {
 }
 
 #contact input {
+	width: 100%;
+}
+
+#contact .inputblock {
+	display: inline-block;
+	margin: 0;
+	margin-left: 10px;
 	width: calc(50% - 5px);
 }
 
-#contact div input:nth-child(2) {
-	margin-left: 10px;
+#contact .inputblock:first-child {
+	margin-left: 0;
+}
+
+#contact input:focus:invalid,
+#contact textarea:focus:invalid {
+	border-color: #f00;
+}
+
+#contact .error {
+	display: none;
+	position: absolute;
+	bottom: 34px;
+	left: 0;
+	padding: 0px 7px;
+	color: #fff;
+	font-size: 16px;
+	line-height: normal;
+	border-radius: 5px;
+	background-color: #f00;
+	animation: none !important;
+	z-index: 100;
+	user-select: none;
+}
+
+#contact textarea + .error {
+	bottom: 154px;
+}
+
+#contact .error::before {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 10px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #f00;
+}
+
+#contact input:focus:invalid + .error,
+#contact textarea:focus:invalid + .error {
+	display: block;
+}
+
+#contact input:focus:valid:not([type="submit"]),
+#contact textarea:focus:valid {
+	border-color: #0f0;
 }
 
 #contact input#captcha,
@@ -966,5 +1020,9 @@ main section {
 
 	#contact textarea {
 		height: 85px;
+	}
+
+	#contact textarea + .error {
+		bottom: 114px;
 	}
 }
