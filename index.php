@@ -120,14 +120,14 @@ foreach ($creations as $creation) {
 ?>
 					<li id="<?php echo $creation['id']; ?>">
 						<picture>
-							<source srcset="img/creations/<?php echo $creation['shortname']; ?>-500w.webp 500w, img/creations/<?php echo $creation['shortname']; ?>-1920w.webp 1150w">
+							<source srcset="img/creations/<?php echo $creation['shortname']; ?>-500w.webp 500w, img/creations/<?php echo $creation['shortname']; ?>-1920w.webp 1920w" sizes="(max-width: 500px) 500px, 1920px">
 							<img src="img/creations/<?php echo $creation['shortname']; ?>-50w.webp" alt="Capture d'écran du site <?php echo $creation['name']; ?>" loading="lazy">
 						</picture>
 <?php
 	if ($creation['mobile']) {
 ?>
-						<img id="smartphone" src="img/smartphone.webp" alt="Smartphone" loading="lazy">
-						<img id="mobile" src="img/creations/<?php echo $creation['shortname']; ?>-mobile.webp" alt="Capture d'écran version mobile du site <?php echo $creation['name']; ?>" loading="lazy">
+						<img class="smartphone" src="img/smartphone.webp" alt="Smartphone" loading="lazy">
+						<img class="mobile" src="img/creations/<?php echo $creation['shortname']; ?>-mobile.webp" alt="Capture d'écran version mobile du site <?php echo $creation['name']; ?>" loading="lazy">
 <?php
 	}
 ?>

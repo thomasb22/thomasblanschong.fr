@@ -500,8 +500,8 @@ main section {
 	image-rendering: -webkit-optimize-contrast;
 }
 
-#creations #smartphone,
-#creations #mobile {
+#creations .smartphone,
+#creations .mobile {
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
@@ -511,7 +511,7 @@ main section {
 	z-index: 12;
 }
 
-#creations #mobile {
+#creations .mobile {
 	bottom: 34px;
 	height: 327px;
 	transform: translateX( calc(-100% - 29px) );
@@ -519,15 +519,15 @@ main section {
 }
 
 #creations img,
-#creations #smartphone,
-#creations #mobile {
+#creations .smartphone,
+#creations .mobile {
 	opacity: 0;
 	filter: blur(50px);
 }
 
 #creations.animed img,
-#creations.animed #smartphone,
-#creations.animed #mobile {
+#creations.animed .smartphone,
+#creations.animed .mobile {
 	animation: .8s ease-in fadeInImg 1s 1 forwards;
 }
 
@@ -989,8 +989,8 @@ main section {
 		display: none;
 	}
 
-	#creations #smartphone,
-	#creations #mobile {
+	#creations .smartphone,
+	#creations .mobile {
 		top: 22%;
 		bottom: unset;
 		left: unset;
@@ -999,7 +999,7 @@ main section {
 		transform: translateX( 0px );
 	}
 
-	#creations #mobile {
+	#creations .mobile {
 		height: 16%;
 		transform: translate(-5%, 2%);
 	}
