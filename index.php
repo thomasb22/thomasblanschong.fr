@@ -11,7 +11,7 @@ require('config.php');
 		<title>Développeur/Intégrateur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL) - Thomas Blanschong</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)" />
-		<meta name="keywords" content="developpeur web, freelance, web, internet, intégrateur, creation site internet, developpeur site web, php, python" />
+		<meta name="keywords" content="developpeur web, freelance, web, internet, intégrateur, création, site internet, developpeur, site web, php, python, html, css, javascript" />
 		<meta name="theme-color" content="#ffffff" />
 		<link rel="manifest" href="/manifest.webmanifest" />
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
