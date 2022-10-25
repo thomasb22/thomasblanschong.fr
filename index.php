@@ -7,23 +7,23 @@ require('config.php');
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>Développeur/Intégrateur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL) - Thomas Blanschong</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)" />
-		<meta name="keywords" content="developpeur web, freelance, web, internet, intégrateur, création, site internet, developpeur, site web, php, python, html, css, javascript" />
-		<meta name="theme-color" content="#ffffff" />
-		<link rel="manifest" href="/manifest.webmanifest" />
-		<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any" />
-		<link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml" />
-		<link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png" />
-		<link rel="stylesheet" href="font-awesome/css/all.css" />
-		<link rel="stylesheet" href="css/style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
+		<meta name="keywords" content="developpeur web, freelance, web, internet, intégrateur, création, site internet, developpeur, site web, php, python, html, css, javascript">
+		<meta name="theme-color" content="#ffffff">
+		<link rel="manifest" href="/manifest.webmanifest">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any">
+		<link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
+		<link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
+		<link rel="stylesheet" href="font-awesome/css/all.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<header>
 			<a href="#presentation">
-				<img src="img/logo.svg" alt="Logo" />
+				<img src="img/logo.svg" alt="Logo">
 			</a>
 			<nav id="menu">
 				<ul>
@@ -51,16 +51,16 @@ require('config.php');
 		</header>
 		<main>
 			<section id="presentation">
-				<img class="animed" src="img/logos/wordpress.svg" alt="WordPress" />
-				<img class="animed" src="img/logos/html5.svg" alt="HTML5" />
-				<img class="animed" src="img/logos/css3.svg" alt="CSS3" />
-				<img class="animed" src="img/logos/javascript.svg" alt="JavaScript" />
-				<img class="animed" src="img/logos/jquery.svg" alt="JQuery" />
-				<img class="animed" src="img/logos/symfony.svg" alt="Symfony" />
-				<img class="animed" src="img/logos/php.svg" alt="PHP" />
-				<img class="animed" src="img/logos/python.svg" alt="Python" />
+				<img class="animed" src="img/logos/wordpress.svg" alt="WordPress">
+				<img class="animed" src="img/logos/html5.svg" alt="HTML5">
+				<img class="animed" src="img/logos/css3.svg" alt="CSS3">
+				<img class="animed" src="img/logos/javascript.svg" alt="JavaScript">
+				<img class="animed" src="img/logos/jquery.svg" alt="JQuery">
+				<img class="animed" src="img/logos/symfony.svg" alt="Symfony">
+				<img class="animed" src="img/logos/php.svg" alt="PHP">
+				<img class="animed" src="img/logos/python.svg" alt="Python">
 				<h1>
-					Bonjour, je suis Thomas. Je suis développeur web <i>full stack</i>,<br />spécialisé en <i>front-end</i>.
+					Bonjour, je suis Thomas. Je suis développeur web <i>full stack</i>,<br>spécialisé en <i>front-end</i>.
 				</h1>
 				<a href="#services" class="next">
 					<i class="fas fa-chevron-down" aria-hidden="true"></i>
@@ -120,14 +120,14 @@ foreach ($creations as $creation) {
 ?>
 					<li id="<?php echo $creation['id']; ?>">
 						<picture>
-							<source srcset="img/creations/<?php echo $creation['shortname']; ?>-500w.webp 500w, img/creations/<?php echo $creation['shortname']; ?>-1920w.webp 1150w" />
-							<img src="img/creations/<?php echo $creation['shortname']; ?>-50w.webp" alt="Capture d'écran du site <?php echo $creation['name']; ?>" loading="lazy" />
+							<source srcset="img/creations/<?php echo $creation['shortname']; ?>-500w.webp 500w, img/creations/<?php echo $creation['shortname']; ?>-1920w.webp 1150w">
+							<img src="img/creations/<?php echo $creation['shortname']; ?>-50w.webp" alt="Capture d'écran du site <?php echo $creation['name']; ?>" loading="lazy">
 						</picture>
 <?php
 	if ($creation['mobile']) {
 ?>
-						<img id="smartphone" src="img/smartphone.webp" alt="Smartphone" loading="lazy" />
-						<img id="mobile" src="img/creations/<?php echo $creation['shortname']; ?>-mobile.webp" alt="Capture d'écran version mobile du site <?php echo $creation['name']; ?>" loading="lazy" />
+						<img id="smartphone" src="img/smartphone.webp" alt="Smartphone" loading="lazy">
+						<img id="mobile" src="img/creations/<?php echo $creation['shortname']; ?>-mobile.webp" alt="Capture d'écran version mobile du site <?php echo $creation['name']; ?>" loading="lazy">
 <?php
 	}
 ?>
@@ -216,28 +216,28 @@ foreach ($creations as $creation) {
 					<form method="post" action="lib/sendmail.php">
 						<div>
 							<div class="inputblock">
-								<input type="text" name="nom" id="nom" minlength="3" maxlength="100" placeholder="Nom*" value="<?php echo $_SESSION['formNom'] ?>" required />
+								<input type="text" name="nom" id="nom" minlength="3" maxlength="100" placeholder="Nom*" value="<?php echo $_SESSION['formNom'] ?>" required>
 								<div class="error">
 									3 caractères minimum
 								</div>
 							</div><div class="inputblock">
-								<input type="email" name="email" id="email" maxlength="255" placeholder="Courriel*" value="<?php echo $_SESSION['formEmail'] ?>" required />
+								<input type="email" name="email" id="email" maxlength="255" placeholder="Courriel*" value="<?php echo $_SESSION['formEmail'] ?>" required>
 								<div class="error">
 									Adresse courriel incorrecte
 								</div>
 							</div>
 							<div class="description">
-								<input type="checkbox" name="copie" id="copie" /> <label for="copie">Envoyer une copie à votre adresse courriel</label>
+								<input type="checkbox" name="copie" id="copie"> <label for="copie">Envoyer une copie à votre adresse courriel</label>
 							</div>
 						</div>
 						<div>
 							<div class="inputblock">
-								<input type="text" name="objet" id="objet" minlength="3" maxlength="100" placeholder="Objet*" value="<?php echo $_SESSION['formObjet'] ?>" required />
+								<input type="text" name="objet" id="objet" minlength="3" maxlength="100" placeholder="Objet*" value="<?php echo $_SESSION['formObjet'] ?>" required>
 								<div class="error">
 									3 caractères minimum
 								</div>
 							</div><div class="inputblock">
-								<input type="url" name="site" id="site" maxlength="255" placeholder="Site web" value="<?php echo $_SESSION['formSite'] ?>" />
+								<input type="url" name="site" id="site" maxlength="255" placeholder="Site web" value="<?php echo $_SESSION['formSite'] ?>">
 								<div class="error">
 									L'adresse web doit débuter par http:// ou https://
 								</div>
@@ -253,7 +253,7 @@ foreach ($creations as $creation) {
 							</div>
 						</div>
 						<div>
-							<input type="number" name="captcha" id="captcha" min="0" max="99" placeholder="Combien font <?php echo $_SESSION['captcha'][0]; ?> + <?php echo $_SESSION['captcha'][1]; ?> ?*" required /><div class="error">
+							<input type="number" name="captcha" id="captcha" min="0" max="99" placeholder="Combien font <?php echo $_SESSION['captcha'][0]; ?> + <?php echo $_SESSION['captcha'][1]; ?> ?*" required><div class="error">
 								Nombre uniquement
 							</div>
 						</div>
@@ -261,7 +261,7 @@ foreach ($creations as $creation) {
 							* Obligatoire
 						</div>
 						<div>
-							<input type="submit" name="submitEmail" id="submitEmail" value="Envoyer" />
+							<input type="submit" name="submitEmail" id="submitEmail" value="Envoyer">
 						</div>
 					</form>
 				</div>
@@ -273,25 +273,25 @@ if ( isset($_GET['sent']) || isset($_GET['errnom']) || isset($_GET['erremail']) 
 	$message = '';
 
 	if ( isset($_GET['sent']) )
-		$message = "Votre courriel à bien été envoyé.<br />
+		$message = "Votre courriel à bien été envoyé.<br>
 					Vous aurrez une réponse d'ici les prochaines 72h.";
 	else {
 		if ( isset($_GET['errnom']) && $_GET['errnom'] == 1 )
-			$message .= "> Vous avez oublié d'entrer votre nom<br />";
+			$message .= "> Vous avez oublié d'entrer votre nom<br>";
 		if ( isset($_GET['errnom']) && $_GET['errnom'] == 2 )
-			$message .= "> Votre nom doit être composé de 3 à 100 caractères<br />";
+			$message .= "> Votre nom doit être composé de 3 à 100 caractères<br>";
 		if ( isset($_GET['erremail']) && $_GET['erremail'] == 1 )
-			$message .= "> Vous avez oublié d'entrer votre courriel<br />";
+			$message .= "> Vous avez oublié d'entrer votre courriel<br>";
 		if ( isset($_GET['erremail']) && $_GET['erremail'] == 2 )
-			$message .= "> Votre courriel est incorrecte<br />";
+			$message .= "> Votre courriel est incorrecte<br>";
 		if ( isset($_GET['errsite']) && $_GET['errsite'] == 1 )
-			$message .= "> L'adresse de votre site web est incorrecte<br />";
+			$message .= "> L'adresse de votre site web est incorrecte<br>";
 		if ( isset($_GET['errobjet']) && $_GET['errobjet'] == 1 )
-			$message .= "> L'objet doit être composé de 3 à 100 caractères<br />";
+			$message .= "> L'objet doit être composé de 3 à 100 caractères<br>";
 		if ( isset($_GET['errmess']) && $_GET['errmess'] == 1 )
-			$message .= "> Le message doit être composé de 20 à 5000 caractères<br />";
+			$message .= "> Le message doit être composé de 20 à 5000 caractères<br>";
 		if ( isset($_GET['errcaptcha']) && $_GET['errcaptcha'] == 1 )
-			$message .= "> Vous n'avez pas entré la bonne réponse à la question de sécurité<br />";
+			$message .= "> Vous n'avez pas entré la bonne réponse à la question de sécurité<br>";
 		if ( isset($_GET['errsend']) && $_GET['errsend'] == 1 )
 			$message .= "> Il y a eu une erreur lors de l'envoi de votre courriel. Veuillez réessayer ultérieurement.
 					</p>
@@ -304,7 +304,7 @@ if ( isset($_GET['sent']) || isset($_GET['errnom']) || isset($_GET['erremail']) 
 				<p>
 					<?php echo $message; ?>
 				</p>
-				<input type="submit" value="Valider" />
+				<input type="submit" value="Valider">
 			</div>
 		</div>
 <?php

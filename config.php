@@ -58,7 +58,7 @@ $insitebox['description'] = "
 								J'ai eu deux projets à réaliser :
 							</p>
 							<p>
-								Le premier était de développer un lecteur de <i>timelapse</i>, intégrant différentes options comme un calendrier, la date et l'heure du cliché affiché, une barre de défilement, la possibilité de zoomer (via des boutons, la molette de la souris ou en pinçant avec les doigts sur mobile), et un bouton pour mettre en plein écran.<br />Différentes options ont été ajoutés par la suite, comme un bouton de partage sur les réseaux sociaux, l'affichage de logos, un bouton multi-vues, etc.<br />Cet outil a un panneau d'administration, permettant de personnaliser chaque <i>timelapse</i>. En parallèle, différents scripts ont été développés pour récupérer les photos sur différents serveurs, appliquer un masque (lorsqu'il y a des zones à camoufler pour des raisons de vie privée ou autre), ou d'autres options comme envoyer un courriel automatiquement en fin de journée.
+								Le premier était de développer un lecteur de <i>timelapse</i>, intégrant différentes options comme un calendrier, la date et l'heure du cliché affiché, une barre de défilement, la possibilité de zoomer (via des boutons, la molette de la souris ou en pinçant avec les doigts sur mobile), et un bouton pour mettre en plein écran.<br>Différentes options ont été ajoutés par la suite, comme un bouton de partage sur les réseaux sociaux, l'affichage de logos, un bouton multi-vues, etc.<br>Cet outil a un panneau d'administration, permettant de personnaliser chaque <i>timelapse</i>. En parallèle, différents scripts ont été développés pour récupérer les photos sur différents serveurs, appliquer un masque (lorsqu'il y a des zones à camoufler pour des raisons de vie privée ou autre), ou d'autres options comme envoyer un courriel automatiquement en fin de journée.
 							</p>
 							<p>
 								Le second projet consistait à intégrer un thème Wordpress depuis une maquette fournie pour le site vitrine de l'entreprise.
@@ -107,7 +107,7 @@ $nintendolesite['description'] = "
 								NintendoLeSite est un projet personnel que je maintiens depuis 2005.
 							</p>
 							<p>
-								Le code côté serveur est écrit en procédural avec le langage PHP sans l'appui d'un <i>framework</i>. Une évolution est prévu vers du POO via l'utilisation du <i>framework</i> Symfony.<br />
+								Le code côté serveur est écrit en procédural avec le langage PHP sans l'appui d'un <i>framework</i>. Une évolution est prévu vers du POO via l'utilisation du <i>framework</i> Symfony.<br>
 								Côté client, les langages HTML5, CSS3, et JavaScript sont utilisés.
 							</p>
 							<p>
