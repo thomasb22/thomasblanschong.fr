@@ -179,7 +179,7 @@ foreach ($creations as $creation) {
 			<section id="a-propos">
 				<div>
 					<p>
-						Développeur web depuis 2005, j'ai débuté dans ce domaine pendant mes études en autodidacte. Améliorant mes acquis grâce à mes études et une veille technologique permanente, je suis à même de vous proposer ces connaissances pour créer ou faire évoluer votre projet.
+						Développeur web depuis 2013, j'ai débuté dans ce domaine pendant mes études en autodidacte en 2005. Améliorant mes acquis grâce à mes études et une veille technologique permanente, je suis à même de vous proposer ces connaissances pour créer ou faire évoluer votre projet.
 					</p>
 					<p>
 						Que cela soit pour un projet entièrement réalisé sur mesure, ou via un <a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_gestion_de_contenu" target="_blank" title="Wikipédia" class="help">CMS</a> soigneusement choisi, je développerai votre projet avec les technologies les plus modernes à ce jour (<a href="https://fr.wikipedia.org/wiki/HTML5" target="_blank" title="Wikipédia" class="help">HTML5</a>, <a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade" target="_blank" title="Wikipédia" class="help">CSS3</a>, <a href="https://fr.wikipedia.org/wiki/JavaScript" target="_blank" title="Wikipédia" class="help">JavaScript</a>, <a href="https://fr.wikipedia.org/wiki/Site_web_r%C3%A9actif" target="_blank" title="Wikipédia" class="help">site web réactif</a>).
