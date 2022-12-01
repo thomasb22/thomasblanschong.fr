@@ -18,7 +18,7 @@ require('config.php');
 		<link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
 		<link rel="stylesheet" href="font-awesome/css/all.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css?1">
 	</head>
 	<body>
 		<header>
@@ -204,6 +204,9 @@ foreach ($creations as $creation) {
 							</a>
 							<a href="https://github.com/thomasb22" target="_blank" class="rslogo github">
 								<i class="fab fa-github fa-2x"></i>
+							</a>
+							<a href="https://www.linkedin.com/in/thomas-blanschong-7b8312258" target="_blank" class="rslogo linkedin">
+								<i class="fab fa-linkedin fa-2x"></i>
 							</a>
 							<a href="http://fr.viadeo.com/fr/profile/thomas.blanschong" target="_blank" class="rslogo viadeo">
 								<i class="fab fa-viadeo fa-2x"></i>
