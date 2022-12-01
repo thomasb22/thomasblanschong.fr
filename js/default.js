@@ -91,6 +91,23 @@ var observerCreation = new IntersectionObserver(function(entries, observer) {
 
 creationElements.forEach(creation => observerCreation.observe(creation));
 
+// Observe si les éléments du formulaire ont le focus pour bloquer le défilement
+
+var inputsContact = document.querySelectorAll('#contact input[type="text"], #contact input[type="number"], #contact textarea');
+
+inputsContact.forEach(function (inputContact) {
+	var main = document.querySelector('main');
+
+	inputContact.addEventListener('focusin', function(e) {
+		main.style.overflow = 'hidden';
+	});
+
+	inputContact.addEventListener('focusout', function(e) {
+		main.scrollTop = main.scrollHeight;
+		main.style.overflow = 'auto';
+	});
+});
+
 // Affichage du nombre de caractères restant
 
 var message = document.querySelector('#message');
