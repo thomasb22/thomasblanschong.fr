@@ -491,8 +491,9 @@ main section {
 	margin-left: 20px;
 	height: calc(100% - 140px);
 	min-width: calc(95% - 20px);
-	border: 3px solid #fff;
+	border: 3px solid var(--main-color2);
 	border-radius: 20px;
+	background-color: var(--main-color2);
 	scroll-snap-align: center;
 	scroll-margin-left: 0;
 	overflow: hidden;
