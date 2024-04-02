@@ -487,12 +487,24 @@ main section {
 
 #creations > ul > li {
 	position: relative;
-	padding-top: 95px;
-	height: calc(100% - 95px);
-	min-width: 100%;
-	background-color: #fff;
-	scroll-snap-align: start;
+	margin-top: 115px;
+	margin-left: 20px;
+	height: calc(100% - 140px);
+	min-width: calc(95% - 20px);
+	border: 3px solid #fff;
+	border-radius: 20px;
+	scroll-snap-align: center;
+	scroll-margin-left: 0;
 	overflow: hidden;
+}
+
+#creations > ul > li:first-child {
+	scroll-snap-align: start;
+	scroll-margin-left: 20px;
+}
+
+#creations > ul > li:last-child {
+	margin-right: 5%;
 }
 
 #creations img {
@@ -518,16 +530,12 @@ main section {
 	z-index: 11;
 }
 
-#creations img,
-#creations .smartphone,
-#creations .mobile {
+#creations {
 	opacity: 0;
 	filter: blur(50px);
 }
 
-#creations.animed img,
-#creations.animed .smartphone,
-#creations.animed .mobile {
+#creations.animed {
 	animation: .8s ease-in fadeInImg 1s 1 forwards;
 }
 
@@ -537,7 +545,7 @@ main section {
 	bottom: 0;
 	left: 50%;
 	right: 0;
-	padding: 95px 400px 30px 30px;
+	padding: 0px 30px 30px 30px;
 	background-color: var(--main-color1);
 	overflow: auto;
 	transform: translateX(200%);
@@ -945,8 +953,17 @@ main section {
 	}
 
 	#creations > ul > li {
-		padding-top: 50px;
-		height: calc(100% - 50px);
+		margin-top: 60px;
+		margin-left: 10px;
+		height: calc(100% - 75px);
+	}
+
+	#creations > ul > li:first-child {
+		scroll-margin-left: 10px;
+	}
+
+	#creations > ul > li:last-child {
+		margin-right: calc(2.5% + 10px - 3px);
 	}
 
 	#creations img {
@@ -967,20 +984,7 @@ main section {
 
 	#creation-previous,
 	#creation-next {
-		top: unset;
-		bottom: calc(30% - 65px);
-		left: 7px;
-		padding: 0;
-		width: 2px;
-		background-color: var(--main-color2);
-		box-shadow: none;
-		pointer-events: none;
-		cursor: default;
-	}
-
-	#creation-next {
-		left: unset !important;
-		right: 7px;
+		display: none;
 	}
 
 	#creations.animed #creation-previous,
