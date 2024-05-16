@@ -8,11 +8,31 @@ require('config.php');
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>Développeur/Intégrateur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL) - Thomas Blanschong</title>
+		<title>Développeur/Intégrateur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (Wordpress, HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL) - Thomas Blanschong</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
-		<meta name="keywords" content="developpeur web, freelance, web, internet, intégrateur, création, site internet, developpeur, site web, php, python, html, css, javascript">
+		<meta name="description" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (Wordpress, HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
+		<meta name="keywords" content="developpeur web, freelance, web, internet, intégrateur, création, site internet, developpeur, site web, worpress, php, python, html, css, javascript">
 		<meta name="theme-color" content="#ffffff">
+		<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+		<!-- Meta Og (facebook) -->
+		<meta property="og:image" content="https://thomasblanschong.fr/img/carte-site.webp">
+		<link rel="image_src" href="https://thomasblanschong.fr/img/carte-site.webp">
+		<meta property="og:locale" content="fr_fr">
+		<meta property="og:site_name" content="Thomas Blanschong - Développeur Web">
+		<meta property="og:title" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (Wordpress, HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
+		<meta property="og:description" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (Wordpress, HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="https://thomasblanschong.fr/">
+		<!-- Card (twitter) -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:description" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (Wordpress, HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
+		<meta name="twitter:image" content="https://thomasblanschong.fr/img/carte-site.webp">
+		<meta name="twitter:title" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (Wordpress, HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
+		<meta name="twitter:url" content="https://thomasblanschong.fr/">
+		<!-- Meta (google+) -->
+		<meta itemprop="name" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (Wordpress, HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
+		<meta itemprop="description" content="Thomas Blanschong : Développeur Web Freelance à Lannion, Côtes-d'Armor, Bretagne (Wordpress, HTML5, CSS3, JavaScript, jQuery, PHP, Python, MySQL)">
+		<meta itemprop="image" content="https://thomasblanschong.fr/img/carte-site.webp">
 		<link rel="manifest" href="/manifest.webmanifest">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="any">
 		<link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
