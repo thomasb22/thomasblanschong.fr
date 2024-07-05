@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1321.4956"
+   height="963.29016"
+   viewBox="0 0 349.64571 254.87052"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-158.35428)">
+    <rect
+       style="fill:#fcfcfd;fill-opacity:1;stroke:none;stroke-width:47.7028;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+       id="rect3356"
+       width="337.64572"
+       height="183.21786"
+       x="164.35428"
+       y="6"
+       ry="9.5306644e-16" />
+    <g
+       id="g2818">
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#02377f;stroke-width:12;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect846"
+         width="337.64572"
+         height="183.21786"
+         x="164.35428"
+         y="6"
+         ry="10.865326" />
+      <path
+         style="fill:none;stroke:#02377f;stroke-width:53.0368;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 333.59904,189.21786 v 65.65266"
+         id="path1525" />
+      <path
+         style="fill:none;stroke:#02377f;stroke-width:12;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 253.7586,248.87052 H 412.59568"
+         id="path2374" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="180.54552"
+       y="28.108513"
+       id="text16126"><tspan
+         id="tspan16124"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#000000;stroke-width:0.264583"
+         x="180.54552"
+         y="28.108513">&lt;!<tspan
+   style="fill:#c87137"
+   id="tspan277610">DOCTYPE html</tspan>&gt;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#c83737;stroke-width:0.264583"
+         x="180.54552"
+         y="41.337639"
+         id="tspan257730">&lt;html&gt;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#c83737;stroke-width:0.264583"
+         x="180.54552"
+         y="54.566761"
+         id="tspan19940">    &lt;head&gt;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+         x="180.54552"
+         y="67.795883"
+         id="tspan19942"><tspan
+           style="fill:#c83737"
+           id="tspan48480">        &lt;meta </tspan><tspan
+           style="fill:#c87137"
+           id="tspan122686">charset</tspan><tspan
+           style="fill:#ffffff"
+           id="tspan129978">=</tspan><tspan
+           style="fill:#88aa00"
+           id="tspan139544">&quot;utf-8&quot;</tspan><tspan
+           style="fill:#c83737"
+           id="tspan59402">&gt;</tspan></tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+         x="180.54552"
+         y="81.025009"
+         id="tspan24470"><tspan
+   style="fill:#c83737"
+   id="tspan59404">        &lt;title&gt;</tspan>Mon site web personnalisé<tspan
+   style="fill:#c83737"
+   id="tspan69860">&lt;/title&gt;</tspan></tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#c83737;stroke-width:0.264583"
+         x="180.54552"
+         y="94.254135"
+         id="tspan24472">    &lt;/head&gt;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#c83737;stroke-width:0.264583"
+         x="180.54552"
+         y="107.48326"
+         id="tspan24474">    &lt;body&gt;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#c83737;stroke-width:0.264583"
+         x="180.54552"
+         y="120.71239"
+         id="tspan24476">        &lt;h1&gt;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+         x="180.54552"
+         y="133.94151"
+         id="tspan24478">            Mon site web</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+         x="180.54552"
+         y="147.17064"
+         id="tspan24480">        <tspan
+   style="fill:#c83737"
+   id="tspan112646">&lt;/h1&gt;</tspan></tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#c83737;stroke-width:0.264583"
+         x="180.54552"
+         y="160.39977"
+         id="tspan24482">    &lt;/body&gt;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;fill:#c83737;stroke-width:0.264583"
+         x="180.54552"
+         y="173.62889"
+         id="tspan24484">&lt;/html&gt;</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+         x="180.54552"
+         y="186.85802"
+         id="tspan19944" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:monospace;-inkscape-font-specification:monospace;stroke-width:0.264583"
+         x="180.54552"
+         y="200.08714"
+         id="tspan16392" /></text>
+  </g>
+</svg>
