@@ -402,6 +402,16 @@ blockquote h3 {
 	transition: all .25s;
 }
 
+#contact .jvuf,
+#contact .jvuf svg {
+	height: 42px;
+}
+
+#contact .jvuf svg {
+	width: 20px;
+	fill: var(--main-color1);
+}
+
 #contact .rslogo:hover {
 	filter: drop-shadow(0px 0px 1px var(--main-color1));
 }
@@ -420,6 +430,10 @@ blockquote h3 {
 
 #contact .viadeo:hover {
 	color: #ff6539;
+}
+
+#contact .jvuf:hover svg {
+	fill: #f20268;
 }
 
 #contact form div {
