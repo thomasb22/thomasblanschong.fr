@@ -48,6 +48,15 @@
 	font-style: italic;
 }
 
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -242,6 +251,10 @@ main > header h1 {
 	font-size: 33px;
 }
 
+#services > p {
+	opacity: 0;
+}
+
 #services ul,
 #creations ul {
 	list-style-type: none;
@@ -254,27 +267,29 @@ main > header h1 {
 	background-repeat: no-repeat;
 	background-size: 159px;
 	background-position: left top;
+	opacity: 0;
 }
 
-#services .devweb {
+#services #devweb {
 	background-image: url("../img/services-dev.svg");
 }
 
-#services .webdesign {
+#services #webdesign {
 	background-image: url("../img/services-webdesign.svg");
 }
 
-#services .integration {
+#services #integration {
 	background-image: url("../img/services-integration.svg");
 }
 
-#services .modules {
+#services #modules {
 	background-image: url("../img/services-modules.svg");
 }
 
 #creations ul {
 	display: flex;
 	justify-content: space-between;
+	opacity: 0;
 }
 
 #creations ul li {
@@ -336,6 +351,12 @@ main > header h1 {
 
 #creations .bouton {
 	margin-bottom: 0;
+}
+
+#services > p.animed,
+#services ul li.animed,
+#creations ul.animed {
+	animation: .5s linear show .25s 1 forwards;
 }
 
 blockquote {
@@ -712,7 +733,7 @@ footer {
 		min-height: calc(100vh - 93px);
 	}
 
-	main * {
+	main > * {
 		scroll-margin-top: 50px;
 	}
 

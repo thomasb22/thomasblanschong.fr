@@ -90,7 +90,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 					Mes services
 				</h2>
 				<ul>
-					<li class="devweb">
+					<li id="devweb">
 						<h3>
 							Développement de site web
 						</h3>
@@ -98,7 +98,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 							Création de site web sur mesure. Que cela soit une simple page vitrine, un blog, un site marchant, ou tout autre type de site, je suis en mesure de vous proposer mes services.
 						</p>
 					</li>
-					<li class="webdesign">
+					<li id="webdesign">
 						<h3>
 							Webdesign
 						</h3>
@@ -106,7 +106,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 							Besoin d'un nouveau design pour votre site ? Je peux vous proposer plusieurs maquettes se rapprochant du mieux possible au contenu de votre site, et à votre identité.
 						</p>
 					</li>
-					<li class="integration">
+					<li id="integration">
 						<h3>
 							Intégration web
 						</h3>
@@ -114,7 +114,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 							Vous avez un nouveau design, mais personne pour l'intégrer à votre site ? Fournissez moi votre maquette, et je l'intégrerai le plus fidèlement possible à votre site.
 						</p>
 					</li>
-					<li class="modules">
+					<li id="modules">
 						<h3>
 							Développement de modules ou de plugins
 						</h3>
