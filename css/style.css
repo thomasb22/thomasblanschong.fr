@@ -62,6 +62,11 @@ body {
 	scroll-behavior: smooth;
 }
 
+h2,
+h3 {
+	text-align: left;
+}
+
 h2 {
 	margin-bottom: 20px;
 	font-size: 42px;
@@ -374,20 +379,6 @@ blockquote h3 {
 	border-color: transparent var(--main-color2);
 }
 
-/*
-#a-propos .bulle::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: -30px;
-	height: 30px;
-	border-left: 60px solid var(--main-color2);
-	border-bottom-left-radius: 80px 50px;
-	background-color: var(--main-color2);
-	transform: translate(0, -2px);
-}
-*/
-
 #a-propos .bulle a {
 	color: var(--main-color1);
 }
@@ -635,6 +626,14 @@ footer {
 }
 
 @media screen and (max-width: 1150px) {
+	html, body {
+		font-size: 18px;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
 	.bouton:hover {
 		color: var(--main-color1);
 		background-color: var(--main-color2);
@@ -725,6 +724,14 @@ footer {
 		overflow: hidden;
 	}
 
+	#services h3 {
+		font-size: 28px;
+	}
+
+	blockquote h3 {
+		font-size: 20px;
+	}
+
 	#a-propos .avatar {
 		display: block;
 		float: none;
@@ -747,6 +754,11 @@ footer {
 
 	#contact #rs {
 		display: block;
+	}
+
+	#contact .jvuf,
+	#contact .jvuf svg {
+		height: 36px;
 	}
 }
 
