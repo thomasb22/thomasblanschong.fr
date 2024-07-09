@@ -345,10 +345,11 @@ blockquote h3 {
 }
 
 #a-propos .avatar {
+	float: left;
 	width: 300px;
 	border: 5px solid var(--main-color2);
 	border-radius: 150px;
-	float: left;
+	background-color: var(--main-color2);
 }
 
 #a-propos .bulle {
