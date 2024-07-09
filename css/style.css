@@ -192,9 +192,8 @@ main > * {
 	padding: 25px 400px;
 	color: var(--main-color2);
 	background-color: var(--main-color1);
-	overflow: hidden;
 	scroll-margin-top: 95px;
-	overflow: initial !important; /* Patch pour scroll-margin-top sur chromium */
+	clear: both;
 }
 
 main > *:nth-child(even) {
@@ -373,6 +372,7 @@ blockquote h3 {
 
 #a-propos .avatar {
 	float: left;
+	margin-bottom: 30px;
 	width: 300px;
 	border: 5px solid var(--main-color2);
 	border-radius: 150px;
