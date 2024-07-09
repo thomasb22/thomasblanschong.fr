@@ -96,6 +96,77 @@ a:focus-visible {
 	transition: none;
 }
 
+label {
+	display: block;
+	position: relative;
+	padding-left: 26px;
+	font-size: 18px;
+	text-align: left;
+	font-weight: normal;
+	user-select: none;
+}
+
+label input {
+	position: absolute;
+	opacity: 0 !important;
+}
+
+/* Create a custom checkbox */
+.checkbox {
+	position: absolute;
+	top: 0px;
+	left: 1px;
+	height: 20px;
+	width: 20px;
+	border-radius: 3px;
+	background-color: var(--main-color1);
+}
+
+/* On mouse-over, add a grey background color */
+label:hover input ~ .checkbox,
+label:focus-within input ~ .checkbox {
+	opacity: 0.75;
+}
+
+/* When the checkbox is checked, add a blue background */
+label input:checked ~ .checkbox {
+	background-color: var(--main-color1);
+}
+
+label input:disabled ~ .txt {
+	cursor: not-allowed;
+	color: #babdb6;
+}
+
+label:hover input:disabled ~ .checkbox,
+label:focus-within input:disabled ~ .checkbox {
+	cursor: not-allowed;
+	background-color: #eee;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+/* Show the checkmark when checked */
+label input:checked ~ .checkbox:after {
+	display: block;
+}
+
+/* Style the checkmark/indicator */
+label .checkbox:after {
+	left: 7px;
+	top: 2px;
+	width: 4px;
+	height: 9px;
+	border: solid var(--main-color2);
+	border-width: 0 3px 3px 0;
+	transform: rotate(45deg);
+}
+
 .bouton {
 	display: block;
 	margin: 20px auto;
@@ -452,12 +523,6 @@ blockquote h3 {
 
 #contact form div {
 	margin: 10px 0;
-}
-
-#contact label {
-	display: inline-block;
-	width: 25%;
-	vertical-align: top;
 }
 
 #contact input::placeholder,

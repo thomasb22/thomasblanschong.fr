@@ -268,7 +268,11 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 								</div>
 							</div>
 							<div class="description">
-								<input type="checkbox" name="copie" id="copie"> <label for="copie">Envoyer une copie à votre adresse courriel</label>
+								<label>
+									<input type="checkbox" name="copie" id="copie">
+									<span class="checkbox"></span>
+									Envoyer une copie à votre adresse courriel
+								</label>
 							</div>
 						</div>
 						<div>
