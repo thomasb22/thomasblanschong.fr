@@ -194,6 +194,7 @@ main > * {
 	background-color: var(--main-color1);
 	overflow: hidden;
 	scroll-margin-top: 95px;
+	overflow: initial !important; /* Patch pour scroll-margin-top sur chromium */
 }
 
 main > *:nth-child(even) {
