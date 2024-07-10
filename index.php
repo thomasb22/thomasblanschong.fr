@@ -313,8 +313,41 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 			</section>
 		</main>
 		<footer>
+			<a href="#ml">Mentions légales</a> – 
 			<a href="https://gitlab.com/se7h/thomasblanschong.fr" target="_blank">Code source</a>
 		</footer>
+		<div id="ml">
+			<div id="mentionslegales">
+				<h2>
+					Mentions légales
+				</h2>
+				<p>
+					Thomas Blanschong<br>
+					12 rue Jules Massenet<br>
+					22300 LANNION
+				</p>
+				<p>
+					<b>Courriel :</b> contact@thomasblanschong.fr<br>
+					<b>Téléphone :</b> 06 32 12 07 10<br>
+					<b>SIRET :</b> 793 657 602 00017<br>
+					<b>APE :</b> 6201Z
+				</p>
+				<h3>
+					Hébergement du site web
+				</h3>
+				<p>
+					<b>OVH SAS</b> – <a href="https://www.ovhcloud.com/">www.ovhcloud.com</a><br>
+					2 rue Kellermann<br>
+					59100 ROUBAIX
+				</p>
+				<p>
+					Site web développé par <b>Thomas Blanschong</b>.
+				</p>
+				<a id="closeml" href="#close">
+					<i class="fas fa-times"></i>
+				</a>
+			</div>
+		</div>
 <?php
 if ( isset($_GET['sent']) || isset($_GET['errnom']) || isset($_GET['erremail']) || isset($_GET['errsite']) || isset($_GET['errobjet']) ||
 	isset($_GET['errmess']) || isset($_GET['errcaptcha']) || isset($_GET['errsend']) ) {

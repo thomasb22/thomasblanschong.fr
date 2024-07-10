@@ -684,7 +684,8 @@ blockquote h3 {
 	font-size: 18px;
 }
 
-#mbox {
+#mbox,
+#ml {
 	position: fixed;
 	left: 0;
 	right: 0;
@@ -698,11 +699,41 @@ blockquote h3 {
 	z-index: 100;
 }
 
-#mbox form {
+#ml {
+	display: none;
+}
+
+#ml:target {
+	display: flex;
+}
+
+#mbox form,
+#mentionslegales {
 	background-color: #fff;
 	padding: 20px;
 	border-radius: 15px;
 	font-size: 22px;
+}
+
+#mentionslegales {
+	position: relative;
+	text-align: left;
+}
+
+#mentionslegales a {
+	color: #000;
+}
+
+#mentionslegales p {
+	margin: 15px 0;
+}
+
+#closeml {
+	position: absolute;
+	right: 12px;
+	top: 6px;
+	color: #000;
+	font-size: 30px;
 }
 
 footer {
