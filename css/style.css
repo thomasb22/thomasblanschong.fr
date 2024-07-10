@@ -90,7 +90,8 @@ a.help {
 	cursor: help;
 }
 
-a:focus-visible {
+a:focus-visible,
+#contact input[type="submit"]:focus-visible {
 	box-shadow: 0 0 0px 5px var(--color3);
 	outline: none;
 	transition: none;
@@ -104,6 +105,11 @@ label {
 	text-align: left;
 	font-weight: normal;
 	user-select: none;
+}
+
+label:hover,
+label:focus-within {
+	text-decoration: underline;
 }
 
 label input {
