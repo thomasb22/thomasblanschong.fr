@@ -847,7 +847,7 @@ footer {
 	}
 
 	#a-propos .bulle::after {
-		top: -25px;
+		top: -24px;
 		left: 50%;
 		border-width: 0 15px 25px;
 		border-color: var(--main-color2) transparent;
