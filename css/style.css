@@ -145,19 +145,19 @@ label:focus-within input:disabled ~ .checkbox {
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkbox:after {
+.checkbox::after {
 	content: '';
 	position: absolute;
 	display: none;
 }
 
 /* Show the checkmark when checked */
-label input:checked ~ .checkbox:after {
+label input:checked ~ .checkbox::after {
 	display: block;
 }
 
 /* Style the checkmark/indicator */
-label .checkbox:after {
+label .checkbox::after {
 	left: 7px;
 	top: 2px;
 	width: 4px;
@@ -260,11 +260,13 @@ main {
 }
 
 main > * {
+	position: relative;
 	padding: 25px 400px;
 	color: var(--main-color2);
 	background-color: var(--main-color1);
 	scroll-margin-top: 95px;
-	clear: both;
+	overflow: auto;
+	z-index: 1;
 }
 
 main > *:nth-child(even) {
@@ -284,7 +286,7 @@ main > header {
 	overflow: hidden;
 }
 
-main > header:before {
+main > header::before {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -297,6 +299,7 @@ main > header:before {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	z-index: -1;
 }
 
 main > header > div {
@@ -443,7 +446,7 @@ blockquote h3 {
 
 #a-propos .avatar {
 	float: left;
-	margin-bottom: 30px;
+	margin-bottom: 7px;
 	width: 300px;
 	border: 5px solid var(--main-color2);
 	border-radius: 150px;
@@ -694,10 +697,19 @@ blockquote h3 {
 }
 
 footer {
+	position: relative;
 	padding: 12px;
 	color: var(--main-color2);
 	text-align: center;
 	background-color: var(--main-color1);
+	z-index: 1;
+}
+
+@supports ( -webkit-touch-callout : none) {
+	main > header::before {
+		position: fixed;
+		background-attachment: unset;
+	}
 }
 
 @media screen and (max-width: 1800px) {
