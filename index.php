@@ -288,7 +288,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 								</div>
 							</div>
 						</div>
-						<div>
+						<div class="textareablock">
 							<textarea name="message" id="message" minlength="20" maxlength="5000" placeholder="Message* (20 caractères minimum)" required><?php echo $_SESSION['formMess'] ?></textarea>
 							<div class="error">
 								20 caractères minimum
@@ -297,7 +297,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 								<span id="counter">5000</span> <span id="countermessage">caractères restants</span>
 							</div>
 						</div>
-						<div>
+						<div class="textareablock">
 							<input type="number" name="captcha" id="captcha" min="0" max="99" placeholder="Combien font <?php echo $_SESSION['captcha'][0]; ?> + <?php echo $_SESSION['captcha'][1]; ?> ?*" required><div class="error">
 								Nombre uniquement
 							</div>

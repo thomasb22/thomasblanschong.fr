@@ -560,7 +560,9 @@ blockquote h3 {
 	width: 100%;
 }
 
-#contact .inputblock {
+#contact .inputblock,
+#contact .textareablock {
+	position: relative;
 	display: inline-block;
 	margin: 0;
 	margin-left: 10px;
@@ -571,6 +573,11 @@ blockquote h3 {
 	margin-left: 0;
 }
 
+#contact .textareablock {
+	margin: 0;
+	width: 100%;
+}
+
 #contact input:focus:invalid,
 #contact textarea:focus:invalid {
 	border-color: #f00;
@@ -579,8 +586,8 @@ blockquote h3 {
 #contact .error {
 	display: none;
 	position: absolute;
-	bottom: 34px;
-	left: 0;
+	top: -38px;
+	left: 14px;
 	padding: 0px 7px;
 	color: #fff;
 	font-size: 16px;
@@ -592,15 +599,11 @@ blockquote h3 {
 	user-select: none;
 }
 
-#contact textarea + .error {
-	bottom: 154px;
-}
-
 #contact .error::before {
 	content: "";
 	position: absolute;
 	bottom: -5px;
-	left: 10px;
+	left: 35px;
 	width: 0;
 	height: 0;
 	border-left: 5px solid transparent;
