@@ -95,7 +95,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 							Développement de site web
 						</h3>
 						<p>
-							Création de site web sur mesure. Que cela soit une simple page vitrine, un blog, un site marchant, ou tout autre type de site, je suis en mesure de vous proposer mes services.
+							Création de site web sur mesure. Que cela soit une simple page vitrine, un blog, un site marchand, ou tout autre type de site, je suis en mesure de vous proposer mes services.
 						</p>
 					</li>
 					<li id="webdesign">
