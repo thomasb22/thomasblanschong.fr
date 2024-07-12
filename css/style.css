@@ -728,6 +728,11 @@ blockquote h3 {
 	margin: 15px 0;
 }
 
+#mentionslegales ul {
+	margin-left: 25px;
+	margin-top: 15px;
+}
+
 #closeml {
 	position: absolute;
 	right: 12px;
