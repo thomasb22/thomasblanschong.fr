@@ -35,6 +35,7 @@ if (window.location.hash == "#creations") {
 
 // Affichage du nombre de caractères restant
 
+var logo = document.querySelector('#logo');
 var message = document.querySelector('#message');
 var counter = document.querySelector('#counter');
 var countermessage = document.querySelector('#countermessage');
@@ -75,8 +76,10 @@ prefersDark.addEventListener('change', function(event) {
 
 function setTheme(currentTheme) {
 	var pressed = currentTheme === 'dark' ? 'true' : 'false';
+	var logotype = currentTheme === 'dark' ? 'logo-sombre.svg' : 'logo.svg';
 	document.documentElement.setAttribute('data-theme-preference', currentTheme);
 	button.setAttribute('aria-pressed', pressed);
+	logo.setAttribute('src', 'img/' + logotype);
 }
 
 setTheme(currentTheme);

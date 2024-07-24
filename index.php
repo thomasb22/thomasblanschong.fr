@@ -41,7 +41,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 	<body>
 		<header>
 			<a href="/#">
-				<img src="img/logo.svg" alt="Logo">
+				<img id="logo" src="img/logo.svg" alt="Logo">
 			</a>
 			<nav id="menu">
 				<button class="theme-switcher" type="button" title="Changer le mode de couleurs" aria-pressed="false">

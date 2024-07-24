@@ -9,16 +9,6 @@
 	--text-form-color: #000;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--main-color1: #295ca2;
-		--main-color2: #000;
-		--header-box-shadow-color: #5555;
-		--github-color: #fff;
-		--text-form-color: #fff;
-	}
-}
-
 [data-theme-preference="dark"]:root {
 	--main-color1: #295ca2;
 	--main-color2: #000;
@@ -449,16 +439,32 @@ main > header h1 {
 	background-image: url("../img/services-dev.svg");
 }
 
+[data-theme-preference="dark"] #services #devweb {
+	background-image: url("../img/services-dev-sombre.svg");
+}
+
 #services #webdesign {
 	background-image: url("../img/services-webdesign.svg");
+}
+
+[data-theme-preference="dark"] #services #webdesign {
+	background-image: url("../img/services-webdesign-sombre.svg");
 }
 
 #services #integration {
 	background-image: url("../img/services-integration.svg");
 }
 
+[data-theme-preference="dark"] #services #integration {
+	background-image: url("../img/services-integration-sombre.svg");
+}
+
 #services #modules {
 	background-image: url("../img/services-modules.svg");
+}
+
+[data-theme-preference="dark"] #services #modules {
+	background-image: url("../img/services-modules-sombre.svg");
 }
 
 #creations ul {
