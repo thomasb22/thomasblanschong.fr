@@ -1,7 +1,30 @@
-:root {
+:root,
+[data-theme-preference="light"]:root {
 	--main-color1: #02377f;
 	--main-color2: #fff;
-	--color3: #77f;
+	--focus-color: #77f;
+	--header-box-shadow-color: #0005;
+	--main-header-color: #02377f;
+	--github-color: #000;
+	--text-form-color: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-color1: #295ca2;
+		--main-color2: #000;
+		--header-box-shadow-color: #5555;
+		--github-color: #fff;
+		--text-form-color: #fff;
+	}
+}
+
+[data-theme-preference="dark"]:root {
+	--main-color1: #295ca2;
+	--main-color2: #000;
+	--header-box-shadow-color: #5555;
+	--github-color: #fff;
+	--text-form-color: #fff;
 }
 
 @font-face {
@@ -92,7 +115,7 @@ a.help {
 
 a:focus-visible,
 #contact input[type="submit"]:focus-visible {
-	box-shadow: 0 0 0px 5px var(--color3);
+	box-shadow: 0 0 0px 5px var(--focus-color);
 	outline: none;
 	transition: none;
 }
@@ -173,6 +196,75 @@ label .checkbox::after {
 	transform: rotate(45deg);
 }
 
+.theme-switcher {
+	--theme-switcher-radius: 40px;
+	--theme-switcher-border: #ddd;
+	--theme-switcher-border-size: 3px;
+	--theme-switcher-background: #ddd;
+	--theme-switcher-icon-size: 24px;
+	--theme-switcher-icon-padding: 3px;
+	--theme-switcher-icon-color: #fff;
+	--theme-switcher-icon-background: #999;
+	display: inline-grid;
+	justify-content: start;
+	width: calc(var(--theme-switcher-icon-size) * 2);
+	background-color: var(--theme-switcher-background);
+	padding: 0;
+	cursor: pointer;
+	line-height: 0;
+	outline-offset: 0.5em;
+	outline-color: currentColor;
+	border: 0;
+	box-shadow: 0 0 0 var(--theme-switcher-border-size) var(--theme-switcher-border);
+	border-radius: var(--theme-switcher-radius);
+	position: absolute;
+	left: -33px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* styles en activant le bouton */
+[aria-pressed="true"].theme-switcher {
+	--theme-switcher-border: #333;
+	--theme-switcher-background: #333;
+	--theme-switcher-icon-background: #666;
+}
+
+/* on cache l'icône light en activant le bouton */
+[aria-pressed="true"].theme-switcher .theme-icon-light {
+	display: none;
+}
+
+/* on déplace l'icône en activant le bouton */
+[aria-pressed="true"].theme-switcher > .theme-icon {
+	translate: calc(var(--theme-switcher-icon-size) - (var(--theme-switcher-icon-padding) * 2 ));
+}
+
+/* on cache l'icône dark en désactivant le bouton */
+[aria-pressed="false"].theme-switcher .theme-icon-dark {
+	display: none;
+}
+
+/* seul le bouton doit être interactif */
+.theme-switcher * {
+	pointer-events: none;
+}
+
+/* conteneur des icônes */
+.theme-switcher > .theme-icon {
+	color: var(--theme-switcher-icon-color);
+	background-color: var(--theme-switcher-icon-background);
+	border-radius: 50%;
+	padding: var(--theme-switcher-icon-padding);
+	transition: 0.3s;
+}
+
+/* taille des icônes */
+.theme-switcher [class^="theme-icon-"] {
+	width: var(--theme-switcher-icon-size);
+	height: var(--theme-switcher-icon-size);
+}
+
 .bouton {
 	display: block;
 	margin: 20px auto;
@@ -206,7 +298,7 @@ body > header {
 	padding: 10px 400px;
 	height: 75px;
 	background-color: var(--main-color2);
-	box-shadow: 0 -3px 12px 10px #0005;
+	box-shadow: 0 -3px 12px 10px var(--header-box-shadow-color);
 	z-index: 20;
 	touch-action: none;
 }
@@ -219,9 +311,11 @@ body > header img {
 	position: absolute;
 	right: 400px;
 	top: 0;
+	height: 95px;
 }
 
 #menu ul {
+	display: inline-block;
 	list-style: none;
 }
 
@@ -289,6 +383,7 @@ main > header {
 	height: calc(100vh - 95px);
 	padding-top: 0;
 	padding-bottom: 0;
+	background-color: var(--main-header-color);
 	overflow: hidden;
 }
 
@@ -397,7 +492,7 @@ main > header h1 {
 }
 
 #creations .linkpic:focus-visible {
-	box-shadow: 0 0 0px 5px var(--color3);
+	box-shadow: 0 0 0px 5px var(--focus-color);
 }
 
 #creations .linkpic div {
@@ -504,6 +599,7 @@ blockquote h3 {
 #contact .jvuf svg {
 	width: 20px;
 	fill: var(--main-color1);
+	transition: fill .25s;
 }
 
 #contact .rslogo:hover {
@@ -515,7 +611,7 @@ blockquote h3 {
 }
 
 #contact .github:hover {
-	color: #000;
+	color: var(--github-color);
 }
 
 #contact .linkedin:hover {
@@ -543,7 +639,7 @@ blockquote h3 {
 
 #contact input:focus::placeholder,
 #contact textarea:focus::placeholder {
-	color: #000;
+	color: var(--text-form-color);
 }
 
 #contact input,
@@ -644,8 +740,8 @@ blockquote h3 {
 
 #contact input:focus,
 #contact textarea:focus {
-	color: #000;
-	background-color: #fff;
+	color: var(--text-form-color);
+	background-color: var(--main-color2);
 }
 
 #contact input[type="checkbox"],
@@ -709,10 +805,11 @@ blockquote h3 {
 
 #mbox form,
 #mentionslegales {
-	background-color: #fff;
 	padding: 20px;
-	border-radius: 15px;
+	color: var(--main-color1);
 	font-size: 22px;
+	border-radius: 15px;
+	background-color: var(--main-color2);
 }
 
 #mentionslegales {
@@ -721,7 +818,7 @@ blockquote h3 {
 }
 
 #mentionslegales a {
-	color: #000;
+	color: var(--main-color1);
 }
 
 #mentionslegales p {
@@ -737,7 +834,7 @@ blockquote h3 {
 	position: absolute;
 	right: 12px;
 	top: 6px;
-	color: #000;
+	color: var(--main-color1);
 	font-size: 30px;
 }
 
@@ -769,7 +866,7 @@ footer {
 	}
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1220px) {
 	html, body {
 		font-size: 18px;
 	}
@@ -782,6 +879,12 @@ footer {
 		color: var(--main-color1);
 		background-color: var(--main-color2);
 		box-shadow: none;
+	}
+
+	.theme-switcher {
+		left: unset;
+		right: 62px;
+		top: 25px;
 	}
 
 	body > header,
@@ -807,6 +910,7 @@ footer {
 		right: 0;
 		left: 0;
 		padding-top: 50px;
+		height: auto;
 		max-height: 0;
 		background-color: transparent;
 		transition: max-height .5s, box-shadow .5s;
@@ -815,6 +919,7 @@ footer {
 	}
 
 	#menu ul {
+		display: block;
 		background-color: var(--main-color2);
 	}
 
@@ -829,7 +934,7 @@ footer {
 
 	#menu:target {
 		max-height: 100vh;
-		box-shadow: 0 -3px 12px 10px #0005;
+		box-shadow: 0 -3px 12px 10px var(--header-box-shadow-color);
 	}
 
 	#menu:target ~ #nav-mobile {
