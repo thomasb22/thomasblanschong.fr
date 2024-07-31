@@ -590,6 +590,10 @@ blockquote h3 {
 	margin: 15px 0;
 }
 
+#contact p {
+	margin: 10px 0;
+}
+
 #contact .rslogo {
 	display: inline-block;
 	margin: 5px;
@@ -668,22 +672,19 @@ blockquote h3 {
 	width: 100%;
 }
 
-#contact .inputblock,
-#contact .textareablock {
+#contact .block {
 	position: relative;
 	display: inline-block;
-	margin: 0;
-	margin-left: 10px;
-	width: calc(50% - 5px);
-}
-
-#contact .inputblock:first-child {
-	margin-left: 0;
-}
-
-#contact .textareablock {
-	margin: 0;
+	margin: 10px 0;
 	width: 100%;
+}
+
+#contact .block:has(#message) {
+	margin-bottom: 0;
+}
+
+#contact .block:has(#captcha) {
+	margin: 0;
 }
 
 #contact input:focus:invalid,

@@ -36,7 +36,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 		<link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
 		<link rel="stylesheet" href="font-awesome/css/all.css">
-		<link rel="stylesheet" href="css/style.css?v=5">
+		<link rel="stylesheet" href="css/style.css?v=6">
 	</head>
 	<body>
 		<header>
@@ -264,40 +264,19 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 						Pour tout renseignement, vous pouvez remplir le formulaire qui suit (merci de renseigner le maximum d'informations si vous voulez un devis ou démarrer un projet).
 					</p>
 					<form method="post" action="lib/sendmail.php">
-						<div>
-							<div class="inputblock">
-								<input type="text" name="nom" id="nom" minlength="3" maxlength="100" placeholder="Nom*" value="<?php echo $_SESSION['formNom'] ?>" required>
-								<div class="error">
-									3 caractères minimum
-								</div>
-							</div><div class="inputblock">
-								<input type="email" name="email" id="email" maxlength="255" placeholder="Courriel*" value="<?php echo $_SESSION['formEmail'] ?>" required>
-								<div class="error">
-									Adresse courriel incorrecte
-								</div>
-							</div>
-							<div class="description">
-								<label>
-									<input type="checkbox" name="copie" id="copie">
-									<span class="checkbox"></span>
-									Envoyer une copie à votre adresse courriel
-								</label>
+						<div class="block">
+							<input type="email" name="email" id="email" maxlength="255" placeholder="Courriel*" value="<?php echo $_SESSION['formEmail'] ?>" required>
+							<div class="error">
+								Adresse courriel incorrecte
 							</div>
 						</div>
-						<div>
-							<div class="inputblock">
-								<input type="text" name="objet" id="objet" minlength="3" maxlength="100" placeholder="Objet*" value="<?php echo $_SESSION['formObjet'] ?>" required>
-								<div class="error">
-									3 caractères minimum
-								</div>
-							</div><div class="inputblock">
-								<input type="url" name="site" id="site" maxlength="255" placeholder="Site web" value="<?php echo $_SESSION['formSite'] ?>">
-								<div class="error">
-									L'adresse web doit débuter par http:// ou https://
-								</div>
+						<div class="block">
+							<input type="text" name="objet" id="objet" minlength="3" maxlength="100" placeholder="Objet*" value="<?php echo $_SESSION['formObjet'] ?>" required>
+							<div class="error">
+								3 caractères minimum
 							</div>
 						</div>
-						<div class="textareablock">
+						<div class="block">
 							<textarea name="message" id="message" minlength="20" maxlength="5000" placeholder="Message* (20 caractères minimum)" required><?php echo $_SESSION['formMess'] ?></textarea>
 							<div class="error">
 								20 caractères minimum
@@ -306,7 +285,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 								<span id="counter">5000</span> <span id="countermessage">caractères restants</span>
 							</div>
 						</div>
-						<div class="textareablock">
+						<div class="block">
 							<input type="number" name="captcha" id="captcha" min="0" max="99" placeholder="Combien font <?php echo $_SESSION['captcha'][0]; ?> + <?php echo $_SESSION['captcha'][1]; ?> ?*" required><div class="error">
 								Nombre uniquement
 							</div>
@@ -380,16 +359,10 @@ if ( isset($_GET['sent']) || isset($_GET['errnom']) || isset($_GET['erremail']) 
 		$message = "Votre courriel à bien été envoyé.<br>
 					Vous aurrez une réponse d'ici les prochaines 72h.";
 	else {
-		if ( isset($_GET['errnom']) && $_GET['errnom'] == 1 )
-			$message .= "> Vous avez oublié d'entrer votre nom<br>";
-		if ( isset($_GET['errnom']) && $_GET['errnom'] == 2 )
-			$message .= "> Votre nom doit être composé de 3 à 100 caractères<br>";
 		if ( isset($_GET['erremail']) && $_GET['erremail'] == 1 )
 			$message .= "> Vous avez oublié d'entrer votre courriel<br>";
 		if ( isset($_GET['erremail']) && $_GET['erremail'] == 2 )
 			$message .= "> Votre courriel est incorrecte<br>";
-		if ( isset($_GET['errsite']) && $_GET['errsite'] == 1 )
-			$message .= "> L'adresse de votre site web est incorrecte<br>";
 		if ( isset($_GET['errobjet']) && $_GET['errobjet'] == 1 )
 			$message .= "> L'objet doit être composé de 3 à 100 caractères<br>";
 		if ( isset($_GET['errmess']) && $_GET['errmess'] == 1 )

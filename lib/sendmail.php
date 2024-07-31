@@ -9,20 +9,9 @@ if (!isset($_POST['submitEmail']))
 else {
 	$out = $errCopy = '';
 
-	$_SESSION['formNom']   = $_POST['nom'];
 	$_SESSION['formEmail'] = $_POST['email'];
-	$_SESSION['formSite']  = $_POST['site'];
 	$_SESSION['formObjet'] = $_POST['objet'];
 	$_SESSION['formMess']  = $_POST['message'];
-
-	if (!isset($_POST['nom']) || empty($_POST['nom']))
-	{
-		$out = 'errnom=1';
-	}
-	else if (strlen($_POST['nom']) < 3 || strlen($_POST['nom']) > 100)
-	{
-		$out = 'errnom=2';
-	}
 
 	if (!isset($_POST['email']) || empty($_POST['email']))
 	{
@@ -37,14 +26,6 @@ else {
 			$out .= '&';
 
 		$out .= 'erremail=2';
-	}
-
-	if (!empty($_POST['site']) && !preg_match("#^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?#", $_POST['site']))
-	{
-		if (!empty($out))
-			$out .= '&';
-
-		$out .= 'errsite=1';
 	}
 
 	if (strlen($_POST['objet']) < 3 || strlen($_POST['objet']) > 100)
@@ -74,45 +55,19 @@ else {
 		$out = '?'.$out.'#contact';
 	}
 	else {
-		if (!empty($_POST['site']))
-			$bodyMail = 'URL du site : '.stripslashes(trim($_POST['site']))."\n\n".stripslashes(trim($_POST['message']));
-		else
-			$bodyMail = stripslashes(trim($_POST['message']));
+		$bodyMail = stripslashes(trim($_POST['message']));
 
 		$mail = new PHPmailer();
 		$mail->IsMail();
 		$mail->CharSet = 'UTF-8';
 		$mail->From = stripslashes(trim($_POST['email']));
-		$mail->FromName = stripslashes(trim($_POST['nom']));
 		$mail->AddAddress('contact@thomasblanschong.fr', 'Thomas Blanschong');
-		$mail->AddReplyTo( stripslashes(trim($_POST['email'])), stripslashes(trim($_POST['nom'])) );
+		$mail->AddReplyTo( stripslashes(trim($_POST['email'])) );
 		$mail->Subject = stripslashes(trim($_POST['objet']));
 		$mail->Body = $bodyMail;
 
-		if ($_POST['copie'] == 'on') {
-			$bodyMail = 'Ceci est une copie du courriel que vous avez envoyé via le site https://thomasblanschong.fr'."\n".'*****************************'."\n".$bodyMail;
-
-			$copy = new PHPmailer();
-			$copy->IsMail();
-			$copy->CharSet = 'UTF-8';
-			$copy->From = stripslashes(trim($_POST['email']));
-			$copy->FromName = stripslashes(trim($_POST['nom']));
-			$copy->AddAddress(stripslashes(trim($_POST['email'])), stripslashes(trim($_POST['nom'])));
-			$copy->AddReplyTo( stripslashes(trim($_POST['email'])), stripslashes(trim($_POST['nom'])) );
-			$copy->Subject = stripslashes(trim($_POST['objet']));
-			$copy->Body = $bodyMail;
-
-			if (!$copy->Send()) {
-				$errCopy = '1';
-			}
-		}
-
-		if (!$mail->Send() || ($_POST['copie'] == 'on' && $errCopy == '1')) {
+		if (!$mail->Send()) {
 			$_SESSION['erreurMail'] = $mail->ErrorInfo;
-
-			if ($_POST['copie'] == 'on')
-				$_SESSION['erreurMail'] .= "\n".$copy->ErrorInfo;
-
 			$out = '?errsend';
 		}
 		else {
