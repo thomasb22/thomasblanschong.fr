@@ -711,7 +711,7 @@ blockquote h3 {
 #contact .error::before {
 	content: "";
 	position: absolute;
-	bottom: -5px;
+	bottom: -4px;
 	left: 35px;
 	width: 0;
 	height: 0;

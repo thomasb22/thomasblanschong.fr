@@ -36,7 +36,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 		<link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
 		<link rel="stylesheet" href="font-awesome/css/all.css">
-		<link rel="stylesheet" href="css/style.css?v=6">
+		<link rel="stylesheet" href="css/style.css?v=7">
 	</head>
 	<body>
 		<header>
