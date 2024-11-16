@@ -845,6 +845,19 @@ blockquote h3 {
 	font-size: 30px;
 }
 
+.phone {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+}
+
+.phone::before {
+	content: "01 70 21 ";
+}
+
+.phone::after {
+	content: "23 60";
+}
+
 footer {
 	position: relative;
 	padding: 12px;
