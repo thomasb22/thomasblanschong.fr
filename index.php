@@ -36,7 +36,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 		<link rel="icon" href="/img/favicons/favicon.svg" type="image/svg+xml">
 		<link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png">
 		<link rel="stylesheet" href="font-awesome/css/all.css">
-		<link rel="stylesheet" href="css/style.css?v=8">
+		<link rel="stylesheet" href="css/style.css?v=9">
 	</head>
 	<body>
 		<header>
@@ -315,7 +315,7 @@ $_SESSION['captcha'] = array( mt_rand(0, 9), mt_rand(1, 9) );
 					22300 LANNION
 				</p>
 				<p>
-					<b>Courriel :</b> contact@thomasblanschong.fr<br>
+					<b>Courriel :</b> <span class="email"></span><br>
 					<b>Téléphone :</b> <span class="phone"></span><br>
 					<b>SIRET :</b> 793 657 602 00017<br>
 					<b>APE :</b> 6201Z

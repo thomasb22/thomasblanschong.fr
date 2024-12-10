@@ -845,7 +845,8 @@ blockquote h3 {
 	font-size: 30px;
 }
 
-.phone {
+.phone,
+.email {
 	unicode-bidi: bidi-override;
 	direction: rtl;
 }
@@ -856,6 +857,14 @@ blockquote h3 {
 
 .phone::after {
 	content: "23 60";
+}
+
+.email::before {
+	content: "rf.gnohcsnalbsamo";
+}
+
+.email::after {
+	content: "ht@tcatnoc";
 }
 
 footer {
